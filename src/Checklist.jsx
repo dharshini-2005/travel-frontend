@@ -27,7 +27,7 @@ const Checklist = () => {
       setItem("");
 const check={location,items};
       try {
-        const response = await axios.post("http://localhost:3000/checklists",check);
+        const response = await axios.post("https://travel-backend-1-ptgi.onrender.com/checklists",check);
         console.log(response);
       } catch (error) {
         alert("Items not added.");

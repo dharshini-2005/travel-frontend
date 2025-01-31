@@ -12,7 +12,7 @@ const Feedback = () => {
 
   const fetchFeedbacks = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/feedbacks");
+      const response = await axios.get("https://travel-backend-1-ptgi.onrender.com/feedbacks");
       setFeedbacks(response.data);
     } catch (error) {
       console.error("Error fetching feedbacks:", error);
@@ -30,7 +30,7 @@ const Feedback = () => {
 
       try {
         // Send data to backend
-        await axios.post("http://localhost:3000/feedbacks", newFeedback);
+        await axios.post("https://travel-backend-1-ptgi.onrender.com/feedbacks", newFeedback);
         setFeedbacks([...feedbacks, newFeedback]); // Update state
         setPlace("");
         setFeedback("");

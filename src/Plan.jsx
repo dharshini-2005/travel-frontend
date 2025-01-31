@@ -8,9 +8,10 @@ const Plan = () => {
 
 
   useEffect(() => {
+    const backend = "https://travel-backend-1-ptgi.onrender.com/plans";
     const fetchPlans = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/plans");
+        const response = await axios.get(`${backend}/plans`);
         setPlans(response.data);
       } catch (error) {
         console.error("Error fetching plans:", error);
@@ -32,7 +33,7 @@ const Plan = () => {
 
     try {
       
-      const response = await axios.post("http://localhost:3000/plans", newPlan);
+      const response = await axios.post(`${backend}/plans`, newPlan);
       console.log("Plan saved:", response.data);
 
     

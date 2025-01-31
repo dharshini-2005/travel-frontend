@@ -12,7 +12,7 @@ const Budget = () => {
   
   useEffect(() => {
     axios
-      .get("http://localhost:3000/budget") 
+      .get("https://travel-backend-1-ptgi.onrender.com/budgets") 
       .then((response) => {
         setSavedBudgets(response.data);
       })
@@ -50,7 +50,7 @@ const Budget = () => {
     };
 
     axios
-      .post("http://localhost:3000/budget", budgetData) // Corrected URL (ensure this is the correct backend endpoint)
+      .post("https://travel-backend-1-ptgi.onrender.com/budgets", budgetData) // Corrected URL (ensure this is the correct backend endpoint)
       .then((response) => {
         alert("Budget saved successfully!");
         setSavedBudgets([...savedBudgets, response.data.newBudget]);

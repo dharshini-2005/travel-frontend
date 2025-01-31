@@ -27,7 +27,7 @@ const Login = () => {
     if (isRegister) {
       
       try {
-        const response = await axios.post("http://localhost:3000/register", {
+        const response = await axios.post("https://travel-backend-1-ptgi.onrender.com/register", {
           username,
           email,
           password,
